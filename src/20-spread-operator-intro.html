@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20 - Spread Operator Intro</title>
+</head>
+<body>
+
+<script>
+  let front = ['react', 'vue', 'angular'];
+  let back = ['python', 'ruby', 'nodejs'];
+
+  console.log([...'will']);
+  console.log(...'will');
+  console.log(...front);
+  console.log(...back);
+
+
+  let fullStack = front.concat(back);
+
+  let fullStackSpread = [...front, 'RxJS', ...back];
+
+  console.log(fullStackSpread);
+  console.log(fullStack);
+
+</script>
+</body>
+</html>

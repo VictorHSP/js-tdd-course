@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>26 - Herança Prototipal</title>
+</head>
+<body>
+
+<script>
+
+
+  class Animal {
+
+    constructor(kind, sound) {
+      this.kind = kind;
+      this.sound = sound;
+    }
+
+    hello() {
+      console.log(`${this.sound} I'm a ${this.kind}!`);
+    }
+
+    static info() {
+      console.log('This is a class to create animals!');
+    }
+
+    get name() {
+      console.log('My name is Klaus!')
+    }
+
+    set nickname(nick) {
+      this.nick = nick;
+    }
+
+  }
+  //
+  // let animal = class {
+  //   // forma não muito utilizada
+  // }
+
+  // function Animal(kind, sound) {
+  //   this.kind = kind;
+  //   this.sound = sound;
+  // }
+  //
+  // Animal.prototype.hello = function () {
+  //   console.log(`${this.sound} I'm a ${this.kind}!`)
+  // }
+
+  const dog = new Animal('dog', 'Au Au');
+  const cat = new Animal('cat', 'Meow');
+</script>
+</body>
+</html>

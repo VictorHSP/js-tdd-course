@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15 - Array find e Array findIndex</title>
+</head>
+<body>
+
+<script>
+  const data = [
+    {
+      name: 'William',
+      age: 26,
+      city: 'Dublin'
+    },
+    {
+      name: 'Victor',
+      age: 23,
+      city: 'Belo Horizonte'
+    },
+    {
+      name: 'Carlos',
+      age: 29,
+      city: 'Belo Horizonte'
+    }
+  ];
+
+  const sampleArray = [4, -5, -1, 0];
+
+  const underZero = sampleArray.find(x => x < 0); // encontra o primeiro valor de acordo com expressão
+
+  const underZeroIndex = sampleArray.findIndex(x => x < 0);
+
+
+  console.log(underZero);
+  console.log(underZeroIndex);
+
+  const will = data.find(person => person.name === 'William');
+  console.log(will);
+
+  const victor = data.find(person => person.city === 'Belo Horizonte');
+  const victorIndex = data.findIndex(person => person.city === 'Belo Horizonte');
+  console.log(victor);
+  console.log(victorIndex);
+
+  const allPeopleBH = data.filter(person => person.city === 'Belo Horizonte');
+  console.log(allPeopleBH);
+
+
+</script>
+</body>
+</html>

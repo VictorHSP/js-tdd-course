@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12 - Novos métodos para Strings</title>
+</head>
+<body>
+
+<script>
+  let text = 'Lorem ipsum dolor sit amet';
+
+  console.log(text.startsWith('Lorem')); // true
+  console.log(text.startsWith('rem')); // false
+  console.log(text.startsWith('rem', 2)); // true - conta a partir do 3° caractere
+
+  console.log(text.endsWith('amet')); //true
+  console.log(text.endsWith('ame')); //false
+  console.log(text.endsWith('ame', text.length - 1)); //true - ignora o útimo caractere
+
+  console.log('csgo'.repeat(3));
+  console.log(text.includes('ipsum'));
+  console.log(text.includes('ipsum', 7));
+
+
+
+
+
+</script>
+</body>
+</html>

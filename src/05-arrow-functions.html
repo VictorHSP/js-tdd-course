@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 - Arrow Functions</title>
+</head>
+<body>
+
+<script>
+  const ireland = ['Dublin', 'Galway', 'Cork'];
+
+  const love = ireland.map(function (nome) {
+    return `I love ${nome}`;
+  });
+
+  console.log(love);
+
+  const loveArrow = ireland.map((name) => {
+    return `I love ${name}`;
+  });
+
+  console.log(loveArrow);
+
+  const loveArrowSingle = ireland.map(name => {
+    return `I love ${name}`;
+  });
+
+  console.log(loveArrowSingle);
+
+  const loveArrowOneLine = ireland.map(name => `I love ${name}`);
+
+  console.log(loveArrowOneLine);
+
+  const loveChain = ireland
+    .filter(name => name === 'Dublin')
+    .map(name => `I love ${name} !`);
+
+  console.log(loveChain);
+
+</script>
+</body>
+</html>

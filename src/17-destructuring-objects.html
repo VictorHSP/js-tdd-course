@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>17 - Destructuring Objects</title>
 </head>
 <body>
-$END$
+
+<script>
+
+  let data = {
+    name: 'Willian',
+    surname: 'Justen',
+    age: 25,
+    blog: 'https://willianjusten.com.br',
+    social: {
+      twitter: '@willian_Justen',
+      facebook: '/willianjusten'
+    }
+  };
+
+  const nameOld = data.name;
+  const surnameOld = data.surname;
+  const ageOld = data.age;
+  const twitterOld = data.social.twitter;
+
+  console.log(nameOld);
+  console.log(surnameOld);
+  console.log(ageOld);
+  console.log(twitterOld);
+
+  const { name, surname } = data;
+
+  console.log(name);
+  console.log(surname);
+
+  const { facebook, twitter } = data.social;
+
+  console.log(facebook);
+  console.log(twitter);
+
+  // define uma variavel
+  const { facebook: fb } = data.social;
+  console.log(fb);
+
+  const { city = 'Dublin', name: n = 'Jonas' } = data;
+  console.log(city, n);
+
+</script>
 </body>
 </html>

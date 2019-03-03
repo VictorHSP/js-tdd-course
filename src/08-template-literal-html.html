@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07 - Template Literal para HTML</title>
+</head>
+<body>
+
+<script>
+  const article = {
+    title: 'Aprendendo Template Strings',
+    intro: 'Uma breve explicação de como se utilizar template strings do ES6',
+    body: `Lorem inpsu dolor sit amet, consectetur adipisicing elit.
+    Molestias, officia, pespicatis? Architecto, molestias autem.
+    Repellat, laborum deserunt soluta necessitatibus. Tenetur illo.`,
+    tags: ['es6', 'js', 'template-strings'],
+    author: 'Victor Hugo'
+  };
+
+  function renderAuthor(name) {
+    return (name) ? name : 'unknown';
+  }
+
+  const markup = `
+
+    <article>
+      <header>
+        <h1>${article.title}</h1>
+      </header>
+
+      <section>
+        <p>${article.intro}</p>
+        <p>${article.body}</p>
+      </section>
+
+      <footer>
+        <ul>
+          ${article.tags.map(tag => `<li>${tag}</li>`).join('')}
+        </ul>
+        <p><em>${renderAuthor(article.author)}</em></p>
+      </footer>
+    </article>
+
+  `;
+
+  document.body.innerHTML = markup;
+
+</script>
+</body>
+</html>

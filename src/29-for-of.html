@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>29 - for...of</title>
+</head>
+<body>
+
+<script>
+
+  // Iterators
+  // Iterable
+
+  // [1, 2, 3, 4, 5, 6] = Iterables - Elementos que pode 'iterar'
+
+  var txt = 'ireland'; // iterable
+  var it = txt[Symbol.iterator](); // iterator
+
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+  console.log(it.next());
+
+  for (letter of txt) {
+    console.log(letter);
+    if (letter === 'a') break;
+  }
+
+
+</script>
+</body>
+</html>

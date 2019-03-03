@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28 - Symbols Intro</title>
+</head>
+<body>
+
+<script>
+  let foo = Symbol('name'); // imutável e único
+  let bar = Symbol('name');
+
+  console.log(foo);
+  console.log(foo == bar); // false
+  console.log(foo === bar); // false
+
+  let object = {
+    [Symbol('name')]: 'Victor',
+    age: 23,
+    city: 'Belo Horizonte'
+  }
+
+  console.log(object);
+  console.log(Object.keys(object));
+  console.log(Object.getOwnPropertySymbols(object));
+
+  const symbols = Object.getOwnPropertySymbols(object);
+  const data = symbols.map(sym => object[sym]);
+
+  console.log(data);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>38 - Async/Await Multiple Promises</title>
+</head>
+<body>
+
+<script>
+
+  async function getUsers(users) {
+    const promises = users.map(user => fetch(`https://api.github.com/users/${user}`).then(r => r.json()));
+
+    const peoples = await Promise.all(promises);
+    console.log(peoples);
+
+  }
+
+  getUsers(['willianjusten', 'VictorHSP']);
+
+</script>
+</body>
+</html>

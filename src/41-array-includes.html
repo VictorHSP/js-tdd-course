@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>41 - Array.prototype.includes</title>
+</head>
+<body>
+
+<script>
+
+  const arr = [1, 2, 3];
+
+  // old
+  console.log(arr.indexOf(3) > -1); // true
+  console.log(arr.indexOf(5) > -1); // false
+
+  // new
+  console.log(arr.includes(3)); // true
+  console.log(arr.includes(5)); // false
+
+</script>
+</body>
+</html>

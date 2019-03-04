@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>35 - Maps Intro</title>
+</head>
+<body>
+
+
+<script>
+  let map = new Map();
+  map.set('victor', 23);
+  map.set('willian', 26);
+  map.set('gon', 13);
+
+  console.log(map.delete('victor'));
+  console.log(map.has('victor')); // false
+
+  for (m of map.values()) {
+    console.log(m);
+  }
+
+</script>
+</body>
+</html>

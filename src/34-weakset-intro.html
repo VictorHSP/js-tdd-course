@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>34 - Weakset Intro</title>
+</head>
+<body>
+
+
+<script>
+
+  let obj1 = {
+    name: 'Victor',
+    age: 26
+  }
+
+  let obj2 = {
+    name: 'Gon',
+    age: 13
+  }
+
+  let ws = new WeakSet([obj1, obj2]);
+  console.log(ws.has(obj1)); // true
+  console.log(ws.has({type: 'obj'})); // false
+
+
+
+</script>
+</body>
+</html>

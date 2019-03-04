@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>33 - Sets Intro</title>
+</head>
+<body>
+
+
+<script>
+  let mySet = new Set(['victor', 'gon', 'escanor']);
+  mySet.add('meliodas');
+  mySet.add('meliodas');
+  mySet.add('meliodas');
+  mySet.add('meliodas');
+
+  mySet.delete('gon');
+
+  console.log(mySet.has('gon')); // false
+  console.log(mySet.has('victor')); // true
+
+  for (name of mySet.values()) {
+    console.log(name);
+  }
+
+
+</script>
+</body>
+</html>
